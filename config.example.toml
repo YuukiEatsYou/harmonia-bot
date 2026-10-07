@@ -1,0 +1,29 @@
+# Configuration for a Harmony bot. Copy this file to config.toml and edit it.
+#
+# The token is a credential: it is shown only once, when the bot is created or
+# its token is regenerated under Admin -> Bots in the Harmony admin panel. Keep
+# this file out of version control (config.toml is gitignored) and never paste
+# the token anywhere it could be read by someone else.
+#
+# You can also supply the token and base URL through the environment
+# (HARMONIA_TOKEN, HARMONIA_BASE_URL) or on the command line, which suits a
+# service unit that should not hold the token in a file.
+
+# The instance to talk to. The gateway address is derived from this.
+base_url = "http://127.0.0.1:5173"
+
+# The bot's token.
+token = "paste-your-bot-token-here"
+
+# Where the bot keeps its config and any data it writes. One folder, safe to
+# back up.
+data_dir = "data"
+
+# The name of this bot's config file: data/config/<name>.json.
+name = "bot"
+
+# The cogs to load on startup, as Python import paths.
+extensions = ["cogs.ping", "cogs.poll", "cogs.moderation"]
+
+# Logging level: DEBUG, INFO, WARNING or ERROR.
+log_level = "INFO"

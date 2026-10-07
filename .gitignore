@@ -1,0 +1,33 @@
+# Vendored Harmony server source. Kept locally for reference (API docs, protocol
+# types) but never pushed; this repo is the bot framework, not the server.
+harmony/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Bot runtime state: local config, persistent data, logs.
+# config.toml holds the bot token; never commit it.
+config.toml
+data/
+config/local.*
+*.local.json
+*.log
+
+# Secrets
+.env
+.env.*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/

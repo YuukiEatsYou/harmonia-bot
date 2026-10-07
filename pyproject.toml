@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "harmonia"
+version = "0.1.0"
+description = "A bot framework for self-hosted Harmony servers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "harmonia-bot contributors" }]
+dependencies = ["aiohttp>=3.9"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+harmonia = "harmonia.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["harmonia"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
