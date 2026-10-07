@@ -1,6 +1,6 @@
 # harmonia-bot
 
-A bot framework for [Harmony](https://github.com/) — the self-hosted,
+A bot framework for [Harmony](https://github.com/YuukiEatsYou/harmony) — the self-hosted,
 single-community chat server. It is to Harmony what [Redbot](https://github.com/CogCreators/Red-DiscordBot)
 is to Discord: a **core** that speaks the whole server API, so you write modules
 (cogs) against a friendly Python interface instead of re-implementing REST and
